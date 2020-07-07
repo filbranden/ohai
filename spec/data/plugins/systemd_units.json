@@ -1,0 +1,358 @@
+{
+  "-.mount": {
+    "slice": "system.slice"
+  },
+  "-.slice": {
+    "units": [
+      "init.scope",
+      "machine.slice",
+      "system.slice",
+      "user.slice"
+    ]
+  },
+  "accounts-daemon.service": {
+    "slice": "system.slice"
+  },
+  "auditd.service": {
+    "slice": "system.slice"
+  },
+  "boot-efi.mount": {
+    "slice": "system.slice"
+  },
+  "boot.mount": {
+    "slice": "system.slice"
+  },
+  "colord.service": {
+    "slice": "system.slice"
+  },
+  "dbus-:1.8-org.freedesktop.problems@0.service": {
+    "slice": "system-dbus\\x2d:1.8\\x2dorg.freedesktop.problems.slice"
+  },
+  "dbus-broker.service": {
+    "slice": "system.slice"
+  },
+  "dbus.socket": {
+    "slice": "system.slice"
+  },
+  "dev-disk-by\\x2did-dm\\x2dname\\x2dfedora\\x2dswap.swap": {
+    "slice": "system.slice"
+  },
+  "dev-disk-by\\x2duuid-ad3d125c\\x2d8a2c\\x2d4665\\x2d997c\\x2d1ed9d2b87549.swap": {
+    "slice": "system.slice"
+  },
+  "dev-dm\\x2d2.swap": {
+    "slice": "system.slice"
+  },
+  "dev-fedora-swap.swap": {
+    "slice": "system.slice"
+  },
+  "dev-mapper-fedora\\x2dswap.swap": {
+    "slice": "system.slice"
+  },
+  "dev-mqueue.mount": {
+    "slice": "system.slice"
+  },
+  "dm-event.socket": {
+    "slice": "system.slice"
+  },
+  "dracut-shutdown.service": {
+    "slice": "system.slice"
+  },
+  "init.scope": {
+    "slice": "-.slice"
+  },
+  "kmod-static-nodes.service": {
+    "slice": "system.slice"
+  },
+  "lvm2-lvmpolld.socket": {
+    "slice": "system.slice"
+  },
+  "lvm2-monitor.service": {
+    "slice": "system.slice"
+  },
+  "lvm2-pvscan@253:0.service": {
+    "slice": "system-lvm2\\x2dpvscan.slice"
+  },
+  "machine.slice": {
+    "slice": "-.slice",
+    "units": []
+  },
+  "mcelog.service": {
+    "slice": "system.slice"
+  },
+  "packagekit.service": {
+    "slice": "system.slice"
+  },
+  "plymouth-quit-wait.service": {
+    "slice": "system.slice"
+  },
+  "plymouth-read-write.service": {
+    "slice": "system.slice"
+  },
+  "plymouth-start.service": {
+    "slice": "system.slice"
+  },
+  "polkit.service": {
+    "slice": "system.slice"
+  },
+  "proc-sys-fs-binfmt_misc.mount": {
+    "slice": "system.slice"
+  },
+  "rngd.service": {
+    "slice": "system.slice"
+  },
+  "rpc-statd-notify.service": {
+    "slice": "system.slice"
+  },
+  "rtkit-daemon.service": {
+    "slice": "system.slice"
+  },
+  "run-user-1001-gvfs.mount": {
+    "slice": "system.slice"
+  },
+  "run-user-1001.mount": {
+    "slice": "system.slice"
+  },
+  "session-4.scope": {
+    "slice": "user-1001.slice"
+  },
+  "sshd.service": {
+    "slice": "system.slice"
+  },
+  "sys-kernel-config.mount": {
+    "slice": "system.slice"
+  },
+  "sys-kernel-debug.mount": {
+    "slice": "system.slice"
+  },
+  "sys-kernel-tracing.mount": {
+    "slice": "system.slice"
+  },
+  "system-dbus\\x2d:1.8\\x2dorg.freedesktop.problems.slice": {
+    "slice": "system.slice",
+    "units": [
+      "dbus-:1.8-org.freedesktop.problems@0.service"
+    ]
+  },
+  "system-getty.slice": {
+    "slice": "system.slice",
+    "units": []
+  },
+  "system-lvm2\\x2dpvscan.slice": {
+    "slice": "system.slice",
+    "units": [
+      "lvm2-pvscan@253:0.service"
+    ]
+  },
+  "system-modprobe.slice": {
+    "slice": "system.slice",
+    "units": []
+  },
+  "system-systemd\\x2dbacklight.slice": {
+    "slice": "system.slice",
+    "units": [
+      "systemd-backlight@backlight:intel_backlight.service",
+      "systemd-backlight@leds:tpacpi::kbd_backlight.service"
+    ]
+  },
+  "system-systemd\\x2dcoredump.slice": {
+    "slice": "system.slice",
+    "units": []
+  },
+  "system-systemd\\x2dhibernate\\x2dresume.slice": {
+    "slice": "system.slice",
+    "units": []
+  },
+  "system-timers-monitoring_agent.slice": {
+    "slice": "system-timers.slice",
+    "units": []
+  },
+  "system-timers.slice": {
+    "slice": "system.slice",
+    "units": [
+      "system-timers-monitoring_agent.slice"
+    ]
+  },
+  "system.slice": {
+    "slice": "-.slice",
+    "units": [
+      "-.mount",
+      "accounts-daemon.service",
+      "auditd.service",
+      "boot-efi.mount",
+      "boot.mount",
+      "colord.service",
+      "dbus-broker.service",
+      "dbus.socket",
+      "dev-disk-by\\x2did-dm\\x2dname\\x2dfedora\\x2dswap.swap",
+      "dev-disk-by\\x2duuid-ad3d125c\\x2d8a2c\\x2d4665\\x2d997c\\x2d1ed9d2b87549.swap",
+      "dev-dm\\x2d2.swap",
+      "dev-fedora-swap.swap",
+      "dev-mapper-fedora\\x2dswap.swap",
+      "dev-mqueue.mount",
+      "dm-event.socket",
+      "dracut-shutdown.service",
+      "kmod-static-nodes.service",
+      "lvm2-lvmpolld.socket",
+      "lvm2-monitor.service",
+      "mcelog.service",
+      "packagekit.service",
+      "plymouth-quit-wait.service",
+      "plymouth-read-write.service",
+      "plymouth-start.service",
+      "polkit.service",
+      "proc-sys-fs-binfmt_misc.mount",
+      "rngd.service",
+      "rpc-statd-notify.service",
+      "rtkit-daemon.service",
+      "run-user-1001-gvfs.mount",
+      "run-user-1001.mount",
+      "sshd.service",
+      "sys-kernel-config.mount",
+      "sys-kernel-debug.mount",
+      "sys-kernel-tracing.mount",
+      "system-dbus\\x2d:1.8\\x2dorg.freedesktop.problems.slice",
+      "system-getty.slice",
+      "system-lvm2\\x2dpvscan.slice",
+      "system-modprobe.slice",
+      "system-systemd\\x2dbacklight.slice",
+      "system-systemd\\x2dcoredump.slice",
+      "system-systemd\\x2dhibernate\\x2dresume.slice",
+      "system-timers.slice",
+      "systemd-coredump.socket",
+      "systemd-fsck-root.service",
+      "systemd-homed.service",
+      "systemd-initctl.socket",
+      "systemd-journal-flush.service",
+      "systemd-journald-audit.socket",
+      "systemd-journald-dev-log.socket",
+      "systemd-journald.service",
+      "systemd-journald.socket",
+      "systemd-logind.service",
+      "systemd-machined.service",
+      "systemd-modules-load.service",
+      "systemd-random-seed.service",
+      "systemd-remount-fs.service",
+      "systemd-repart.service",
+      "systemd-rfkill.socket",
+      "systemd-sysctl.service",
+      "systemd-tmpfiles-setup-dev.service",
+      "systemd-tmpfiles-setup.service",
+      "systemd-udev-trigger.service",
+      "systemd-udevd.service",
+      "systemd-update-utmp.service",
+      "systemd-user-sessions.service",
+      "systemd-userdbd.service",
+      "systemd-userdbd.socket",
+      "systemd-vconsole-setup.service",
+      "tmp.mount"
+    ]
+  },
+  "systemd-backlight@backlight:intel_backlight.service": {
+    "slice": "system-systemd\\x2dbacklight.slice"
+  },
+  "systemd-backlight@leds:tpacpi::kbd_backlight.service": {
+    "slice": "system-systemd\\x2dbacklight.slice"
+  },
+  "systemd-coredump.socket": {
+    "slice": "system.slice"
+  },
+  "systemd-fsck-root.service": {
+    "slice": "system.slice"
+  },
+  "systemd-homed.service": {
+    "slice": "system.slice"
+  },
+  "systemd-initctl.socket": {
+    "slice": "system.slice"
+  },
+  "systemd-journal-flush.service": {
+    "slice": "system.slice"
+  },
+  "systemd-journald-audit.socket": {
+    "slice": "system.slice"
+  },
+  "systemd-journald-dev-log.socket": {
+    "slice": "system.slice"
+  },
+  "systemd-journald.service": {
+    "slice": "system.slice"
+  },
+  "systemd-journald.socket": {
+    "slice": "system.slice"
+  },
+  "systemd-logind.service": {
+    "slice": "system.slice"
+  },
+  "systemd-machined.service": {
+    "slice": "system.slice"
+  },
+  "systemd-modules-load.service": {
+    "slice": "system.slice"
+  },
+  "systemd-random-seed.service": {
+    "slice": "system.slice"
+  },
+  "systemd-remount-fs.service": {
+    "slice": "system.slice"
+  },
+  "systemd-repart.service": {
+    "slice": "system.slice"
+  },
+  "systemd-rfkill.socket": {
+    "slice": "system.slice"
+  },
+  "systemd-sysctl.service": {
+    "slice": "system.slice"
+  },
+  "systemd-tmpfiles-setup-dev.service": {
+    "slice": "system.slice"
+  },
+  "systemd-tmpfiles-setup.service": {
+    "slice": "system.slice"
+  },
+  "systemd-udev-trigger.service": {
+    "slice": "system.slice"
+  },
+  "systemd-udevd.service": {
+    "slice": "system.slice"
+  },
+  "systemd-update-utmp.service": {
+    "slice": "system.slice"
+  },
+  "systemd-user-sessions.service": {
+    "slice": "system.slice"
+  },
+  "systemd-userdbd.service": {
+    "slice": "system.slice"
+  },
+  "systemd-userdbd.socket": {
+    "slice": "system.slice"
+  },
+  "systemd-vconsole-setup.service": {
+    "slice": "system.slice"
+  },
+  "tmp.mount": {
+    "slice": "system.slice"
+  },
+  "user-1001.slice": {
+    "slice": "user.slice",
+    "units": [
+      "session-4.scope",
+      "user-runtime-dir@1001.service",
+      "user@1001.service"
+    ]
+  },
+  "user-runtime-dir@1001.service": {
+    "slice": "user-1001.slice"
+  },
+  "user.slice": {
+    "slice": "-.slice",
+    "units": [
+      "user-1001.slice"
+    ]
+  },
+  "user@1001.service": {
+    "slice": "user-1001.slice"
+  }
+}
